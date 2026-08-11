@@ -59,8 +59,18 @@ def create_empty_provenance_run_crate(rocrate_version="1.1"):
 def get_acro_version(sacro_metadata):
     return sacro_metadata['version']
 
-def define_acro_json(version):
-    acro_json = {
+def define_programminglanguage():
+    prog_json = {
+        "@id": "sacro",
+        "@type": "ComputerLanguage",
+        "identifier": "https://sacro-tools.org/",
+        "name": "SACRO",
+        "url": "https://sacro-tools.org/"
+    }
+    return prog_json
+
+def define_softwareapplication(version):
+    soft_json = {
         "@id": "https://github.com/AI-SDC/acro",
         "@type": "SoftwareApplication",
         "identifier": {"@id": "https://doi.org/10.5281/zenodo.18456450"},
@@ -68,13 +78,13 @@ def define_acro_json(version):
         "name": "ACRO",
         "version": version
     }
-    return acro_json
+    return soft_json
 
 def define_main_entity(mainentity):
     main_entity = {
         "@type": ["File", "SoftwareSourceCode", "ComputationalWorkflow"],
         "name": mainentity,
-        "programmingLanguage": {"@id": "https://github.com/AI-SDC/acro"}
+        "programmingLanguage": {"@id": "sacro"}
     }
     return main_entity
     
@@ -118,7 +128,8 @@ if __name__ == '__main__':
     main_entity = crate.add_file(args.wffile,properties=define_main_entity(str(args.wffile)))
     core_dataset.append_to("mainEntity", main_entity)
 
-    crate.add_jsonld(define_acro_json(get_acro_version(sacro_metadata)))
+    crate.add_jsonld(define_programminglanguage())
+    crate.add_jsonld(define_softwareapplication(get_acro_version(sacro_metadata)))
 
     for file in get_output_files(sacro_metadata):
         crate.add_file(file)
