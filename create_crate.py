@@ -9,24 +9,24 @@ from rocrate.model.contextentity import ContextEntity
 def create_empty_provenance_run_crate(rocrate_version="1.1"):
     crate = ROCrate(version=rocrate_version)
     process_crate = crate.add(ContextEntity(
-            crate, "https://w3id.org/ro/wfrun/process/0.1",
+            crate, "https://w3id.org/ro/wfrun/process/0.5",
             properties = {
                 "@type": "CreativeWork",
                 "name": "Process Run Crate",
-                "version": "0.1"
+                "version": "0.5"
             }
     ))
     wfrun_crate = crate.add_jsonld({
-        "@id": "https://w3id.org/ro/wfrun/workflow/0.1",
+        "@id": "https://w3id.org/ro/wfrun/workflow/0.5",
         "@type": "CreativeWork",
         "name": "Workflow Run Crate",
-        "version": "0.1"
+        "version": "0.5"
     })
     prov_crate = crate.add_jsonld({
-        "@id": "https://w3id.org/ro/wfrun/provenance/0.1",
+        "@id": "https://w3id.org/ro/wfrun/provenance/0.5",
         "@type": "CreativeWork",
         "name": "Provenance Run Crate",
-        "version": "0.1"
+        "version": "0.5"
     })
     wf_crate = crate.add_jsonld({
         "@id": "https://w3id.org/ro/wfrun/workflow-ro-crate/1.0",
