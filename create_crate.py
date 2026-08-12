@@ -132,7 +132,8 @@ if __name__ == '__main__':
     crate.add_jsonld(define_softwareapplication(get_acro_version(sacro_metadata)))
 
     for file in get_output_files(sacro_metadata):
-        crate.add_file(file)
+        file_object = crate.add_file(file)
+        main_entity.append_to("output", file_object)
 
 
 
