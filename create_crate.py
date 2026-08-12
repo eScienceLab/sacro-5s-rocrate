@@ -29,7 +29,7 @@ def create_empty_provenance_run_crate(rocrate_version="1.1"):
         "version": "0.5"
     })
     wf_crate = crate.add_jsonld({
-        "@id": "https://w3id.org/ro/wfrun/workflow-ro-crate/1.0",
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
         "@type": "CreativeWork",
         "name": "Workflow RO-Crate",
         "version": "1.0"
