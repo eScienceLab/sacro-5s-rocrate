@@ -126,13 +126,14 @@ if __name__ == '__main__':
     core_dataset = crate.get('./')
 
     main_entity = crate.add_file(args.wffile,properties=define_main_entity(str(args.wffile)))
-    core_dataset.append_to("mainEntity", main_entity)
+    core_dataset["mainEntity"] = main_entity
 
     crate.add_jsonld(define_programminglanguage())
     crate.add_jsonld(define_softwareapplication(get_acro_version(sacro_metadata)))
 
     for file in get_output_files(sacro_metadata):
         crate.add_file(file)
+
 
 
     crate.write("./")
