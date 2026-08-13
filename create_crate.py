@@ -4,6 +4,7 @@ import json
 import argparse
 from rocrate.rocrate import ROCrate
 from rocrate.model.contextentity import ContextEntity
+from rocrate.model.person import Person
 
 
 def create_empty_provenance_run_crate(rocrate_version="1.1"):
@@ -110,6 +111,19 @@ def get_output_files(sacro_metadata):
             file_list.append(file["name"])
     return file_list
 
+person_info = {
+    "id": "https://orcid.org/0000-0000-0000-0000",
+    "name": "Joe Doe",
+    "affiliation": "Place University"
+    }
+
+def define_person(info):
+    return {
+        "name": info["name"],
+        "affiliation": info["affiliation"]
+    }
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path)
@@ -127,6 +141,8 @@ if __name__ == '__main__':
 
     main_entity = crate.add_file(args.wffile,properties=define_main_entity(str(args.wffile)))
     core_dataset["mainEntity"] = main_entity
+
+    actor = crate.add(Person(crate, person_info["id"], properties=define_person(person_info)))
 
     crate.add_jsonld(define_programminglanguage())
     crate.add_jsonld(define_softwareapplication(get_acro_version(sacro_metadata)))
