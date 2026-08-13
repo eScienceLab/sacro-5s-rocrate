@@ -104,12 +104,18 @@ def move_to_crate(crate_path):
     print(f"moved to dir {crate_path}")
 
 
-def get_output_files(sacro_metadata):
-    file_list = []
+def get_output_steps_and_files(sacro_metadata):
+    outputs_list = []
     for output in sacro_metadata["results"].keys():
+        output_count = 0
         for file in sacro_metadata["results"][output]["files"]:
-            file_list.append(file["name"])
-    return file_list
+            outputs_list.append({
+                         "tool": output,
+                         "name": f"{output}_result_{output_count}",
+                         "file": file["name"]
+                         })
+            output_count += 1
+    return outputs_list
 
 person_info = {
     "id": "https://orcid.org/0000-0000-0000-0000",
@@ -117,39 +123,71 @@ person_info = {
     "affiliation": "Place University"
     }
 
+def define_inputobject():
+    input_object = {
+        "@type": "FormalParameter",
+        "additionalType": "File",
+        "name": "input data",
+        "description": "sample data for analysis",
+        "conformsTo": {
+            "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+        },
+        "valueRequired": "True"
+    }
+    return input_object
+
+def define_outputobject():
+    output_object = {
+        "@type": "FormalParameter",
+        "additionalType": "File",
+        "name": "analysis result",
+        "description": "analysis of input",
+        "conformsTo": {
+            "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE"
+        }
+    }
+    return output_object
+
 def define_person(info):
     return {
         "name": info["name"],
         "affiliation": info["affiliation"]
     }
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path)
     parser.add_argument('--sacro', type=Path, default="results.json")
     parser.add_argument('--wffile', type=Path, default="analysis.py")
+    parser.add_argument('--input', type=Path, default="input_data.txt")
 
     args = parser.parse_args()
 
     move_to_crate(args.root)
 
     sacro_metadata = load_sacro_metadata(args.sacro)
+    outputs_list = get_output_steps_and_files(sacro_metadata)
 
     crate = create_empty_provenance_run_crate()
     core_dataset = crate.get('./')
 
-    main_entity = crate.add_file(args.wffile,properties=define_main_entity(str(args.wffile)))
-    core_dataset["mainEntity"] = main_entity
+    workflow_object = crate.add_file(args.wffile,properties=define_main_entity(str(args.wffile)))
+    core_dataset["mainEntity"] = workflow_object
 
-    actor = crate.add(Person(crate, person_info["id"], properties=define_person(person_info)))
+    output_objects = [crate.add(ContextEntity(crate,outobj["name"],define_outputobject())) for outobj in outputs_list]
+    input_objects = [crate.add(ContextEntity(crate, "input_data",define_inputobject()))]
+
+    workflow_object["input"] = input_objects
+    workflow_object["output"] = output_objects
 
     crate.add_jsonld(define_programminglanguage())
     crate.add_jsonld(define_softwareapplication(get_acro_version(sacro_metadata)))
 
-    for file in get_output_files(sacro_metadata):
-        file_object = crate.add_file(file)
-        main_entity.append_to("output", file_object)
+    actor = crate.add(Person(crate, person_info["id"], properties=define_person(person_info)))
+
+    input_file = crate.add_file(args.input)
+    for output in outputs_list:
+        file_object = crate.add_file(output["file"])
 
 
 
