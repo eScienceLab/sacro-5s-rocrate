@@ -1,0 +1,10 @@
+system:
+  hardware:
+    vendor: Intel
+    name: Xeon
+    cores: 16
+    threads: 32
+  software:
+    name: Ubuntu
+    version: "24.04"
+  hostname: carberry-lab-01
