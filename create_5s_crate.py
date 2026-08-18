@@ -42,7 +42,10 @@ def main():
 
     args = parser.parse_args()
 
-    crate = FiveSafesCrate(root_dataset_id="https://tre72.example.org/activities/A123/current")
+    crate = FiveSafesCrate(root_dataset_id="https://tre72.example.org/activities/A123/current",
+                            record_identifier="https://tre72.example.org/activities/A123",
+                            identifier="https://tre72.example.org/activities/A123/current"
+                          )
 
     crate.write("./")
     print("finished writing crate metadata")
