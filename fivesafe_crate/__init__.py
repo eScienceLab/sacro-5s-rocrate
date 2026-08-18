@@ -15,7 +15,10 @@ class FiveSafesCrate(ROCrate):
                  version=DEFAULT_VERSION,
                  rocrate_base_version=DEFAULT_ROCRATE_VERSION,
                  load_subcrates=False,
-                 root_dataset_id=None):
+                 root_dataset_id=None,
+                 record_identifier=None,
+                 identifier=None
+                 ):
         super().__init__(source, gen_preview, init, exclude,
                          rocrate_base_version, load_subcrates, root_dataset_id)
         
@@ -26,7 +29,46 @@ class FiveSafesCrate(ROCrate):
 						"version": version
 					}
                 ))
+        self.root_dataset["conformsTo"] = [{"@id": f"https://w3id.org/5s-crate/{version}"}]
 
+        if record_identifier:
+            self.recordIdentifier = {"@id":record_identifier}
+
+        if identifier:
+            self.identifier = {"@id":identifier}
+
+
+    @property
+    def recordIdentifier(self):
+        self.root_dataset.get('dct:isVersionOf')
+
+    @recordIdentifier.setter
+    def recordIdentifier(self, value):
+        self.root_dataset['dct:isVersionOf'] = value
+
+    @property
+    def identifier(self):
+        self.root_dataset.get('identifier')
+
+    @identifier.setter
+    def identifier(self, value):
+        self.root_dataset['identifier'] = value
+
+    @property
+    def currentVersion(self):
+        self.root_dataset.get('version')
+
+    @recordIdentifier.setter
+    def currentVersion(self, value):
+        self.root_dataset['version'] = value
+
+    @property
+    def previousVersion(self):
+        self.root_dataset.get('version')
+
+    @recordIdentifier.setter
+    def previousVersion(self, value):
+        self.root_dataset['pav:previousVersion'] = value
 
 
 
