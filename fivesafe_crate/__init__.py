@@ -13,10 +13,11 @@ class FiveSafesCrate(ROCrate):
                  gen_preview=False,
                  init=False, exclude=None,
                  version=DEFAULT_VERSION,
+                 rocrate_base_version=DEFAULT_ROCRATE_VERSION,
                  load_subcrates=False,
                  root_dataset_id=None):
         super().__init__(source, gen_preview, init, exclude,
-                         DEFAULT_ROCRATE_VERSION, load_subcrates, root_dataset_id)
+                         rocrate_base_version, load_subcrates, root_dataset_id)
         
         self.add(ContextEntity(self, f"https://w3id.org/5s-crate/{version}",
 					properties = {
