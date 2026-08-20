@@ -70,6 +70,8 @@ class FiveSafesCrate(ROCrate):
     def previousVersion(self, value):
         self.root_dataset['pav:previousVersion'] = value
 
+    def add_person_from_prov(self, metadata):
+        self.add(Person(self, metadata['orcid'], properties = metadata))
 
 
 def create_empty_fivesafe_crate(rocrate_base_version="1.3",
