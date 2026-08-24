@@ -1,0 +1,2198 @@
+{
+    "version": "0.4.12",
+    "results": {
+        "output_0": {
+            "uid": "output_0",
+            "status": "pass",
+            "type": "regression",
+            "properties": {
+                "method": "ols",
+                "dof": 12958
+            },
+            "files": [
+                {
+                    "name": "output_0_0.csv",
+                    "sdc": {}
+                },
+                {
+                    "name": "output_0_1.csv",
+                    "sdc": {}
+                },
+                {
+                    "name": "output_0_2.csv",
+                    "sdc": {}
+                }
+            ],
+            "outcome": {},
+            "command": "results = acro.ols(y, x)",
+            "summary": "MinimumDoFCheck: pass dof=12958 >= 10",
+            "timestamp": "2026-07-15T13:37:17.497224",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "CorrelationCoefficients",
+                "risks": [
+                    "LowDOF"
+                ],
+                "checks_needed": [
+                    "MinimumDoFCheck"
+                ],
+                "common_mitigations": [
+                    "Aggregation",
+                    "Noise",
+                    "OutlierRemoval",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "MinimumDoFCheck": "pass"
+                },
+                "dependent": "recommend_int",
+                "independent": [
+                    "children"
+                ]
+            }
+        },
+        "output_1": {
+            "uid": "output_1",
+            "status": "pass",
+            "type": "regression",
+            "properties": {
+                "method": "olsr",
+                "dof": 12958
+            },
+            "files": [
+                {
+                    "name": "output_1_0.csv",
+                    "sdc": {}
+                },
+                {
+                    "name": "output_1_1.csv",
+                    "sdc": {}
+                },
+                {
+                    "name": "output_1_2.csv",
+                    "sdc": {}
+                }
+            ],
+            "outcome": {},
+            "command": "results = acro.olsr(formula=\"recommend_int ~ children\", data=new_df)",
+            "summary": "MinimumDoFCheck: pass dof=12958 >= 10",
+            "timestamp": "2026-07-15T13:37:17.567008",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "CorrelationCoefficients",
+                "risks": [
+                    "LowDOF"
+                ],
+                "checks_needed": [
+                    "MinimumDoFCheck"
+                ],
+                "common_mitigations": [
+                    "Aggregation",
+                    "Noise",
+                    "OutlierRemoval",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "MinimumDoFCheck": "pass"
+                },
+                "dependent": "recommend_int",
+                "independent": [
+                    "children"
+                ]
+            }
+        },
+        "output_2": {
+            "uid": "output_2",
+            "status": "pass",
+            "type": "regression",
+            "properties": {
+                "method": "probit",
+                "dof": 12958
+            },
+            "files": [
+                {
+                    "name": "output_2_0.csv",
+                    "sdc": {}
+                },
+                {
+                    "name": "output_2_1.csv",
+                    "sdc": {}
+                }
+            ],
+            "outcome": {},
+            "command": "results = acro.probit(y, x)",
+            "summary": "MinimumDoFCheck: pass dof=12958 >= 10",
+            "timestamp": "2026-07-15T13:37:17.618580",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "CorrelationCoefficients",
+                "risks": [
+                    "LowDOF"
+                ],
+                "checks_needed": [
+                    "MinimumDoFCheck"
+                ],
+                "common_mitigations": [
+                    "Aggregation",
+                    "Noise",
+                    "OutlierRemoval",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "MinimumDoFCheck": "pass"
+                },
+                "dependent": "finance",
+                "independent": [
+                    "children"
+                ]
+            }
+        },
+        "output_3": {
+            "uid": "output_3",
+            "status": "pass",
+            "type": "regression",
+            "properties": {
+                "method": "logit",
+                "dof": 12958
+            },
+            "files": [
+                {
+                    "name": "output_3_0.csv",
+                    "sdc": {}
+                },
+                {
+                    "name": "output_3_1.csv",
+                    "sdc": {}
+                }
+            ],
+            "outcome": {},
+            "command": "results = acro.logit(y, x)",
+            "summary": "MinimumDoFCheck: pass dof=12958 >= 10",
+            "timestamp": "2026-07-15T13:37:17.655615",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "CorrelationCoefficients",
+                "risks": [
+                    "LowDOF"
+                ],
+                "checks_needed": [
+                    "MinimumDoFCheck"
+                ],
+                "common_mitigations": [
+                    "Aggregation",
+                    "Noise",
+                    "OutlierRemoval",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "MinimumDoFCheck": "pass"
+                },
+                "dependent": "finance",
+                "independent": [
+                    "children"
+                ]
+            }
+        },
+        "output_4": {
+            "uid": "output_4",
+            "status": "review",
+            "type": "pie chart",
+            "properties": {
+                "method": "pie"
+            },
+            "files": [
+                {
+                    "name": "pie_0.png",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 0,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 0
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {},
+            "command": "_ = acro.pie(data=df,column=var,filename=\"pie.png\")",
+            "summary": "PieChart : \n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents'].\nPlease also for missing categories.",
+            "timestamp": "2026-07-15T13:37:17.791613",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "Frequencies",
+                "risks": [
+                    "ClassDisclosure",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "RequiredZeroCheck",
+                    "PresenceOfZeroCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "RequiredZeroCheck": "pass",
+                    "PresenceOfZeroCheck": "pass",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "pass"
+                },
+                "dependent": "unknown",
+                "independent": [
+                    "parents"
+                ]
+            }
+        },
+        "output_5": {
+            "uid": "output_5",
+            "status": "review",
+            "type": "pie chart",
+            "properties": {
+                "method": "pie"
+            },
+            "files": [
+                {
+                    "name": "pie_1.png",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 0,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 0
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {},
+            "command": "_ = acro.pie(data=df,column=var,filename=\"pie.png\")",
+            "summary": "PieChart : \n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['children'].\nPlease also for missing categories.",
+            "timestamp": "2026-07-15T13:37:17.851720",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "Frequencies",
+                "risks": [
+                    "ClassDisclosure",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "RequiredZeroCheck",
+                    "PresenceOfZeroCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "RequiredZeroCheck": "pass",
+                    "PresenceOfZeroCheck": "pass",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "pass"
+                },
+                "dependent": "unknown",
+                "independent": [
+                    "children"
+                ]
+            }
+        },
+        "output_6": {
+            "uid": "output_6",
+            "status": "fail",
+            "type": "histogram",
+            "properties": {
+                "method": "histogram"
+            },
+            "files": [
+                {
+                    "name": "children_hist_0.png",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 0,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 2
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    9,
+                                    0
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {},
+            "command": "_=acro.hist(data=df,column=\"children\",filename=\"children_hist.png\")",
+            "summary": "Histogram : \n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['children'].\n MinimumThresholdCheck: fail - 2 cells may need suppressing.\n Review Notes: Please check extreme bin edges are not disclosive.Please also check bin ends and empty bins are not disclosive.",
+            "timestamp": "2026-07-15T13:37:18.071795",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "Frequencies",
+                "risks": [
+                    "ClassDisclosure",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "RequiredZeroCheck",
+                    "PresenceOfZeroCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "RequiredZeroCheck": "pass",
+                    "PresenceOfZeroCheck": "pass",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "unknown",
+                "independent": [
+                    "children"
+                ]
+            }
+        },
+        "output_7": {
+            "uid": "output_7",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_7_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 0,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 0
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "convenient": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "inconv": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df.parents,df.finance)",
+            "summary": "FrequencyTable : \n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'finance'].\n",
+            "timestamp": "2026-07-15T13:37:18.182050",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "Frequencies",
+                "risks": [
+                    "ClassDisclosure",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "RequiredZeroCheck",
+                    "PresenceOfZeroCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "RequiredZeroCheck": "pass",
+                    "PresenceOfZeroCheck": "pass",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "pass"
+                },
+                "dependent": "unknown",
+                "independent": [
+                    "parents",
+                    "finance"
+                ]
+            }
+        },
+        "output_8": {
+            "uid": "output_8",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_8_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 0,
+                            "PPercentCheck": 0,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 0
+                        },
+                        "cells": {
+                            "NKCheck": [],
+                            "PPercentCheck": [],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "convenient": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "inconv": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df.parents,df.finance,values=df.children,aggfunc=\"sum\")",
+            "summary": "Sum : \n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'finance'].\n",
+            "timestamp": "2026-07-15T13:37:18.250739",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "pass",
+                    "PPercentCheck": "pass",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "pass"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "finance"
+                ]
+            }
+        },
+        "output_9": {
+            "uid": "output_9",
+            "status": "fail",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_9_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 1,
+                            "PPercentCheck": 1,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 4
+                        },
+                        "cells": {
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "1": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "MinimumThresholdCheck; ",
+                    "usual": "NKCheck; PPercentCheck; MinimumThresholdCheck; "
+                },
+                "2": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df.parents,df.recommend, values=df.children,aggfunc=\"mean\")",
+            "summary": "Mean : \nNKCheck: fail - 1 cells may need suppressing.\n PPercentCheck: fail - 1 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 4 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:18.322318",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_10": {
+            "uid": "output_10",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "suppress"
+            },
+            "files": [
+                {
+                    "name": "output_10_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 1,
+                            "PPercentCheck": 1,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 4
+                        },
+                        "cells": {
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "1": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "MinimumThresholdCheck; ",
+                    "usual": "NKCheck; PPercentCheck; MinimumThresholdCheck; "
+                },
+                "2": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df.parents,df.recommend, values=df.children,aggfunc=\"mean\")",
+            "summary": "Mean : \nNKCheck: fail - 1 cells may need suppressing.\n PPercentCheck: fail - 1 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 4 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:18.413693",
+            "comments": [],
+            "exception": "Suppression automatically applied where needed",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_11": {
+            "uid": "output_11",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "suppress"
+            },
+            "files": [
+                {
+                    "name": "output_11_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 2,
+                            "PPercentCheck": 2,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 5
+                        },
+                        "cells": {
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "1": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "MinimumThresholdCheck; ",
+                    "usual": "NKCheck; PPercentCheck; MinimumThresholdCheck; ",
+                    "All": "NKCheck; PPercentCheck; MinimumThresholdCheck; "
+                },
+                "2": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "All": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df['parent spaces'],df['recomm end'], values=df.children,aggfunc=\"mean\",margins=True)",
+            "summary": "Mean : \nNKCheck: fail - 2 cells may need suppressing.\n PPercentCheck: fail - 2 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parent spaces', 'recomm end'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:18.625820",
+            "comments": [],
+            "exception": "Suppression automatically applied where needed",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parent spaces",
+                    "recomm end"
+                ]
+            }
+        },
+        "output_12": {
+            "uid": "output_12",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "suppress"
+            },
+            "files": [
+                {
+                    "name": "output_12_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 7,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 8,
+                            "NKCheck": 1,
+                            "PPercentCheck": 1
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    2
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ],
+                                [
+                                    5,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    1,
+                                    2
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ],
+                                [
+                                    4,
+                                    1
+                                ],
+                                [
+                                    5,
+                                    1
+                                ]
+                            ],
+                            "NKCheck": [
+                                [
+                                    4,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    4,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "('count', '0')": {
+                    "('great_pret', 'convenient')": "ok",
+                    "('great_pret', 'inconv')": "ok",
+                    "('pretentious', 'convenient')": "ok",
+                    "('pretentious', 'inconv')": "ok",
+                    "('usual', 'convenient')": "ok",
+                    "('usual', 'inconv')": "ok"
+                },
+                "('count', '1')": {
+                    "('great_pret', 'convenient')": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "('great_pret', 'inconv')": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "('pretentious', 'convenient')": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "('pretentious', 'inconv')": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "('usual', 'convenient')": "MinimumThresholdCheck; NKCheck; PPercentCheck; ",
+                    "('usual', 'inconv')": "PresenceOfZeroCheck; MinimumThresholdCheck; "
+                },
+                "('count', '2')": {
+                    "('great_pret', 'convenient')": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "('great_pret', 'inconv')": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "('pretentious', 'convenient')": "ok",
+                    "('pretentious', 'inconv')": "ok",
+                    "('usual', 'convenient')": "ok",
+                    "('usual', 'inconv')": "ok"
+                },
+                "('count', '3')": {
+                    "('great_pret', 'convenient')": "ok",
+                    "('great_pret', 'inconv')": "ok",
+                    "('pretentious', 'convenient')": "ok",
+                    "('pretentious', 'inconv')": "ok",
+                    "('usual', 'convenient')": "ok",
+                    "('usual', 'inconv')": "ok"
+                },
+                "('count', '4')": {
+                    "('great_pret', 'convenient')": "ok",
+                    "('great_pret', 'inconv')": "ok",
+                    "('pretentious', 'convenient')": "ok",
+                    "('pretentious', 'inconv')": "ok",
+                    "('usual', 'convenient')": "ok",
+                    "('usual', 'inconv')": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab([df.parents,df.finance],df.recommend,",
+            "summary": "FrequencyTable : \n PresenceOfZeroCheck: fail - 7 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'finance', 'recommend'].\n MinimumThresholdCheck: fail - 8 cells may need suppressing.\nMean : \nNKCheck: fail - 1 cells may need suppressing.\n PPercentCheck: fail - 1 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'finance', 'recommend'].\n MinimumThresholdCheck: fail - 8 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:18.790805",
+            "comments": [],
+            "exception": "Suppression automatically applied where needed",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "finance",
+                    "recommend"
+                ]
+            }
+        },
+        "output_13": {
+            "uid": "output_13",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "suppress"
+            },
+            "files": [
+                {
+                    "name": "output_13_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 3,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 5,
+                            "NKCheck": 2,
+                            "PPercentCheck": 2
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "('count', '0')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', '1')": {
+                    "great_pret": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "pretentious": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "usual": "MinimumThresholdCheck; NKCheck; PPercentCheck; ",
+                    "All": "MinimumThresholdCheck; NKCheck; PPercentCheck; "
+                },
+                "('count', '2')": {
+                    "great_pret": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', '3')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', '4')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', 'All')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df.parents,df.recommend,",
+            "summary": "FrequencyTable : \n PresenceOfZeroCheck: fail - 3 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\nMean : \nNKCheck: fail - 2 cells may need suppressing.\n PPercentCheck: fail - 2 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:18.994364",
+            "comments": [],
+            "exception": "Suppression automatically applied where needed",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_14": {
+            "uid": "output_14",
+            "status": "fail",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_14_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 3,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 5,
+                            "NKCheck": 2,
+                            "PPercentCheck": 2
+                        },
+                        "cells": {
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "('count', '0')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', '1')": {
+                    "great_pret": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "pretentious": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "usual": "MinimumThresholdCheck; NKCheck; PPercentCheck; ",
+                    "All": "MinimumThresholdCheck; NKCheck; PPercentCheck; "
+                },
+                "('count', '2')": {
+                    "great_pret": "PresenceOfZeroCheck; MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', '3')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', '4')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "('count', 'All')": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "mytable=acro.crosstab(df.parents,df.recommend,",
+            "summary": "FrequencyTable : \n PresenceOfZeroCheck: fail - 3 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\nMean : \nNKCheck: fail - 2 cells may need suppressing.\n PPercentCheck: fail - 2 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:19.179378",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_15": {
+            "uid": "output_15",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "crosstab",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_15_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "PresenceOfLinkedTableCheck": 0,
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 0
+                        },
+                        "cells": {
+                            "PresenceOfLinkedTableCheck": [],
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "convenient": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                },
+                "inconv": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok"
+                }
+            },
+            "command": "mytab=acro.crosstab(df.parents,df.finance,values=df.children,aggfunc=\"mode\")",
+            "summary": "ModeCalculation : \nPresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'finance'].\n",
+            "timestamp": "2026-07-15T13:37:19.247049",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "Mode",
+                "risks": [
+                    "Differencing",
+                    "ClassDisclosure"
+                ],
+                "checks_needed": [
+                    "PresenceOfLinkedTableCheck",
+                    "RequiredZeroCheck",
+                    "PresenceOfZeroCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "PresenceOfLinkedTableCheck": "review",
+                    "RequiredZeroCheck": "pass",
+                    "PresenceOfZeroCheck": "pass"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "finance"
+                ]
+            }
+        },
+        "output_16": {
+            "uid": "output_16",
+            "status": "fail",
+            "type": "table",
+            "properties": {
+                "method": "pivot_table",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_16_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 2,
+                            "PPercentCheck": 2,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 5
+                        },
+                        "cells": {
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "1": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "MinimumThresholdCheck; ",
+                    "usual": "NKCheck; PPercentCheck; MinimumThresholdCheck; ",
+                    "All": "NKCheck; PPercentCheck; MinimumThresholdCheck; "
+                },
+                "2": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "All": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "res=acro.pivot_table(data=df,index='parents',columns='recommend',",
+            "summary": "Mean : \nNKCheck: fail - 2 cells may need suppressing.\n PPercentCheck: fail - 2 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:19.415799",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_17": {
+            "uid": "output_17",
+            "status": "review",
+            "type": "table",
+            "properties": {
+                "method": "pivot_table",
+                "mitigation": "suppress"
+            },
+            "files": [
+                {
+                    "name": "output_17_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 2,
+                            "PPercentCheck": 2,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 5
+                        },
+                        "cells": {
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "1": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "MinimumThresholdCheck; ",
+                    "usual": "NKCheck; PPercentCheck; MinimumThresholdCheck; ",
+                    "All": "NKCheck; PPercentCheck; MinimumThresholdCheck; "
+                },
+                "2": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "All": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "res=acro.pivot_table(data=df,index='parents',columns='recommend',",
+            "summary": "Mean : \nNKCheck: fail - 2 cells may need suppressing.\n PPercentCheck: fail - 2 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:19.563092",
+            "comments": [],
+            "exception": "Suppression automatically applied where needed",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_18": {
+            "uid": "output_18",
+            "status": "fail",
+            "type": "table",
+            "properties": {
+                "method": "pivot_table",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_18_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "NKCheck": 2,
+                            "PPercentCheck": 2,
+                            "PresenceOfLinkedTableCheck": 0,
+                            "MinimumThresholdCheck": 5
+                        },
+                        "cells": {
+                            "NKCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PPercentCheck": [
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ],
+                            "PresenceOfLinkedTableCheck": [],
+                            "MinimumThresholdCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    2,
+                                    1
+                                ],
+                                [
+                                    3,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "1": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "MinimumThresholdCheck; ",
+                    "usual": "NKCheck; PPercentCheck; MinimumThresholdCheck; ",
+                    "All": "NKCheck; PPercentCheck; MinimumThresholdCheck; "
+                },
+                "2": {
+                    "great_pret": "MinimumThresholdCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "All": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "res=acro.pivot_table(data=df,index='parents',columns='recommend',",
+            "summary": "Mean : \nNKCheck: fail - 2 cells may need suppressing.\n PPercentCheck: fail - 2 cells may need suppressing.\n PresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n MinimumThresholdCheck: fail - 5 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:19.701439",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "LinearAggregations",
+                "risks": [
+                    "Dominance",
+                    "Differencing",
+                    "LowCount"
+                ],
+                "checks_needed": [
+                    "NKCheck",
+                    "PPercentCheck",
+                    "PresenceOfLinkedTableCheck",
+                    "MinimumThresholdCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "OutlierRemoval",
+                    "Rounding",
+                    "Suppression",
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Rounding",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "NKCheck": "fail",
+                    "PPercentCheck": "fail",
+                    "PresenceOfLinkedTableCheck": "review",
+                    "MinimumThresholdCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_19": {
+            "uid": "output_19",
+            "status": "fail",
+            "type": "table",
+            "properties": {
+                "method": "pivot_table",
+                "mitigation": "none"
+            },
+            "files": [
+                {
+                    "name": "output_19_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "PresenceOfLinkedTableCheck": 0,
+                            "RequiredZeroCheck": 0,
+                            "PresenceOfZeroCheck": 3
+                        },
+                        "cells": {
+                            "PresenceOfLinkedTableCheck": [],
+                            "RequiredZeroCheck": [],
+                            "PresenceOfZeroCheck": [
+                                [
+                                    0,
+                                    1
+                                ],
+                                [
+                                    0,
+                                    2
+                                ],
+                                [
+                                    1,
+                                    1
+                                ]
+                            ]
+                        }
+                    }
+                }
+            ],
+            "outcome": {
+                "0": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "1": {
+                    "great_pret": "PresenceOfZeroCheck; ",
+                    "pretentious": "PresenceOfZeroCheck; ",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "2": {
+                    "great_pret": "PresenceOfZeroCheck; ",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "3": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "4": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                },
+                "All": {
+                    "great_pret": "ok",
+                    "pretentious": "ok",
+                    "usual": "ok",
+                    "All": "ok"
+                }
+            },
+            "command": "res2=acro.pivot_table(data=df,index='parents',columns='recommend',",
+            "summary": "ModeCalculation : \nPresenceOfLinkedTableCheck: A manual review is needed. Variables defining table are:  ['parents', 'recommend'].\n PresenceOfZeroCheck: fail - 3 cells may need suppressing.\n",
+            "timestamp": "2026-07-15T13:37:19.768315",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "Mode",
+                "risks": [
+                    "Differencing",
+                    "ClassDisclosure"
+                ],
+                "checks_needed": [
+                    "PresenceOfLinkedTableCheck",
+                    "RequiredZeroCheck",
+                    "PresenceOfZeroCheck"
+                ],
+                "common_mitigations": [
+                    "Noise",
+                    "Suppression",
+                    "Noise",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "PresenceOfLinkedTableCheck": "review",
+                    "RequiredZeroCheck": "pass",
+                    "PresenceOfZeroCheck": "fail"
+                },
+                "dependent": "children",
+                "independent": [
+                    "parents",
+                    "recommend"
+                ]
+            }
+        },
+        "output_20": {
+            "uid": "output_20",
+            "status": "fail",
+            "type": "table",
+            "properties": {
+                "method": "surv func"
+            },
+            "files": [
+                {
+                    "name": "output_20_0.csv",
+                    "sdc": {
+                        "summary": {
+                            "StatbarnDataCheck": 0,
+                            "MinimumDoFCheck": 0
+                        },
+                        "cells": {
+                            "StatbarnDataCheck": [],
+                            "MinimumDoFCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {},
+            "command": "acro.surv_func(data.futime, data.death, output=\"table\")",
+            "summary": "KaplanMeier : \nStatbarnDataCheck: review: a manual check may be needed if related plots have been produced MinimumDoFCheck: fail dof=dummy        1\nnum at risk   \n3974         0\n3975         0\n3976         0\n3977         0\n3978         0\n...         ..\n4338         0\n4342         0\n4343         0\n4347         0\n4350         0\n\n[259 rows x 1 columns] < 10",
+            "timestamp": "2026-07-15T13:37:20.812320",
+            "comments": [],
+            "exception": "",
+            "fair": {
+                "context": "https://w3id.org/statbarnsdc#",
+                "statbarn": "HazardSurvivalTables",
+                "risks": [
+                    "ImplicitTables",
+                    "LowDOF"
+                ],
+                "checks_needed": [
+                    "StatbarnDataCheck",
+                    "MinimumDoFCheck"
+                ],
+                "common_mitigations": [
+                    "Aggregation",
+                    "Noise",
+                    "OutlierRemoval",
+                    "Suppression"
+                ],
+                "check_status": {
+                    "StatbarnDataCheck": "review",
+                    "MinimumDoFCheck": "fail"
+                },
+                "dependent": "unknown",
+                "independent": [
+                    "num at risk"
+                ]
+            }
+        },
+        "output_21": {
+            "uid": "output_21",
+            "status": "fail",
+            "type": "survival plot",
+            "properties": {
+                "method": "surv_func"
+            },
+            "files": [
+                {
+                    "name": "kaplan-meier_0.png",
+                    "sdc": {
+                        "summary": {
+                            "StatbarnDataCheck": 0,
+                            "MinimumDoFCheck": 0
+                        },
+                        "cells": {
+                            "StatbarnDataCheck": [],
+                            "MinimumDoFCheck": []
+                        }
+                    }
+                }
+            ],
+            "outcome": {},
+            "command": "acro.surv_func(data.futime, data.death, output=\"plot\")",
+            "summary": "KaplanMeier : \nStatbarnDataCheck: review: a manual check may be needed if related plots have been produced MinimumDoFCheck: fail dof=dummy        1\nnum at risk   \n3974         0\n3975         0\n3976         0\n3977         0\n3978         0\n...         ..\n4338         0\n4342         0\n4343         0\n4347         0\n4350         0\n\n[259 rows x 1 columns] < 10",
+            "timestamp": "2026-07-15T13:37:20.883308",
+            "comments": [],
+            "exception": "",
+            "fair": {}
+        }
+    }
+}
