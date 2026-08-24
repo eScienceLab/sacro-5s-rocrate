@@ -1,7 +1,7 @@
 from pathlib import Path
 import argparse
-from fivesafe_crate import FiveSafesCrate
-from prov_tooling import ProvData
+from fivesafe_crate_py import FiveSafesCrate
+from provff_py import ProvData
 
 
 def main():
