@@ -26,7 +26,7 @@ Once the tool is more developed this section will be expanded.
     * It contains a fair section wihch is ultimately what we're interested in.
     * That is consumed by the `sacro-5s-rocrate/create_5s_crate.py`
     * (@nimpo, find this in the `~/Project/SACRO5s/SACRO_Example_ROCrate` @douglowe sent you a tarball)
- 3. Set up the .env such that it has a path PFFPATH as per env.example,
+ 1. Set up the .env such that it has a path PFFPATH as per env.example,
     ```
     export PFFPATH="tests/provenance/user:tests/provenance/project:tests/provenance/tre"
     ```
@@ -36,7 +36,7 @@ Once the tool is more developed this section will be expanded.
       ```
       export PFFPATH="$REPO_HOME/tests/provenance/user:$REPO_HOME/tests/provenance/project:$REPO_HOME/tests/provenance/tre"
       ```
- 5. Run with the command in the SACRO5s project environment 
+ 1. Run with the command in the SACRO5s project environment 
     * The python virtual environment as discussed in [Setup](#Setup) above (For @nimpo this is venv in `~/Project/SACRO5s/` and the example is a subdirectory of this)
     ```
     python create_5s_crate.py --root ./SACRO_Example_ROCrate \
@@ -44,3 +44,6 @@ Once the tool is more developed this section will be expanded.
                               --wffile ./SACRO_Example_ROCrate/analysis.py \
                               --input ./SACRO_Example_ROCrate/input_data.txt
     ```
+ 1. We're trying to output something that looks like the example in
+    * Document is WIP (sometimes even it's filename changes! [five-safes-profile.md](https://github.com/eScienceLab/Five-Safes-RO-Crate/blob/a179a4f884691a7e96c6141ed160ee1be97ec5e5/docs/five-safes-profile.md#complete-example))
+    * [index.md](https://github.com/eScienceLab/Five-Safes-RO-Crate/blob/1.0/docs/index.md#complete-example) (2026-09-24)
