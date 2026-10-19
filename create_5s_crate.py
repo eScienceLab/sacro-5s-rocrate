@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from pathlib import Path
 import argparse
 from fivesafe_crate_py import FiveSafesCrate
@@ -23,7 +24,13 @@ def main():
                             record_identifier="https://tre72.example.org/activities/A123",
                             identifier="https://tre72.example.org/activities/A123/current"
                           )
-    provData = ProvData()
+
+    
+    pffpath = os.getenv('PFFPATH', 'tests/provenance/user:tests/provenance/project:tests/provenance/tre')
+    wd = Path(__file__).resolve().parent
+    pffpath=":".join(str(wd / p) for p in pffpath.split(":"))
+
+    provData = ProvData(pffpath)
     provData.load_pff_data(["user"])
 
     crate.add_person_from_prov(provData.serviceData["user"])
