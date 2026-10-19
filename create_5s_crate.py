@@ -3,6 +3,7 @@
 import os
 from pathlib import Path
 import argparse
+import json
 from fivesafe_crate_py import FiveSafesCrate
 from provff_py import ProvData
 from datetime import datetime
@@ -46,7 +47,7 @@ def main():
             print("moving inferred",out,"to",noclobber)
             out.rename(noclobber)
         print("New metadata file in ", args.output / 'ro-crate-metadata.json')
-        crate.write_detached(args.output / 'ro-crate-metadata.json') # Need to write detached apparently as crate lib doesn't know where to put file otherwise
+        crate.metadata.write(args.output)
     else:
         out = args.output
         if out.exists():
@@ -55,7 +56,11 @@ def main():
             print("moving specified ",out,"to",noclobber)
             out.rename(noclobber)
         print("New metadata file in ", args.output )
-        crate.write(args.output)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        with args.output.open("w", encoding="utf-8") as f:
+            json.dump(crate.metadata.generate(), f, indent=4, ensure_ascii=False)
+            f.write("\n")
+
 
 if __name__ == "__main__":
     main()
