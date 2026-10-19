@@ -9,11 +9,14 @@ from provff_py import ProvData
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path)
-    parser.add_argument('--sacro', type=Path, default="results.json")
-    parser.add_argument('--wffile', type=Path, default="analysis.py")
-    parser.add_argument('--input', type=Path, default="input_data.txt")
+    parser.add_argument('--sacro', type=Path, default="results.json", help='Path to the SACRO results.json to use')
+    parser.add_argument('--wffile', type=Path, default="analysis.py", help='TODO explain analysis.py')
+    parser.add_argument('--input', type=Path, default="input_data.txt",  help='TODO explain input_data.txt')
+    parser.add_argument('--output', type=Path, default=None)
 
     args = parser.parse_args()
+    if args.output is None:
+        args.output = args.root if args.root is not None else Path(".")
 
     crate = FiveSafesCrate(root_dataset_id="https://tre72.example.org/activities/A123/current",
                             record_identifier="https://tre72.example.org/activities/A123",
