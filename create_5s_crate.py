@@ -23,7 +23,9 @@ def main():
 
     crate = FiveSafesCrate(root_dataset_id="https://tre72.example.org/activities/A123/current",
                             record_identifier="https://tre72.example.org/activities/A123",
-                            identifier="https://tre72.example.org/activities/A123/current"
+                            identifier="https://tre72.example.org/activities/A123/current",
+                            version="1.0-draft",
+                            rocrate_base_version="1.3"
                           )
 
     
@@ -35,7 +37,6 @@ def main():
     provData.load_pff_data(["user"])
 
     crate.add_person_from_prov(provData.serviceData["user"])
-
 
     # Special handling default is to write to ./ but that is in the pwd whereas crate.write should place inside the crate no?
     # so if output is specified and is a directory, then add ro-crate-metadata.json in that location
